@@ -7,7 +7,7 @@ Trigger  Pattern
 Implemented a dedicated Apex class to handle the trigger logic, keeping the trigger itself thin and focused.
 
 Bulkification: 
-All DML and SOQL operations are performed outside of loops, ensuring the code efficiently handles large volumes of records (batch processing) and stays well within Governor Limits.
+All DML and SOQL operations are performed outside of loops, ensuring the code efficiently handles potential large volumes of records and stays well within Governor Limits.
 
 Trigger Recursion Control
-Implemented a static variable to prevent a trigger from firing multiple times within the same transaction (recursion), ensuring stability and preventing infinite loops.
+Implemented a static variable to prevent a trigger from firing multiple times within the same transaction (recursion), reventing infinite loops.
